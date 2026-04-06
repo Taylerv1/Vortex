@@ -2,13 +2,13 @@
 import { useHead } from '#imports'
 
 useHead({
-  title: 'Votrex',
+  title: 'Votrex | AI Workspace',
 })
 
 const highlights = [
-  'Shows page routing with a home page and a chat page.',
-  'Uses reusable Vue components with props, emits, and v-model.',
-  'Connects the frontend to a server API without exposing the API key.',
+  'Get instant answers grounded in your product docs and workspace context.',
+  'Keep conversations organized by project, with searchable history and notes.',
+  'Protect keys and sensitive data with secure server-side request handling.',
 ]
 </script>
 
@@ -37,21 +37,21 @@ const highlights = [
 
           <div class="space-y-4">
             <p class="text-[11px] font-semibold uppercase tracking-[0.32em] text-emerald-600">
-              Nuxt 3 + Vue 3 Demo
+              AI Workspace for Product Teams
             </p>
             <h1 class="max-w-3xl text-3xl font-semibold tracking-tight text-slate-900 md:text-[2.4rem]">
-              A clean AI assistant demo with a modern chat-style interface.
+              Move from idea to shipped work with one focused AI workspace.
             </h1>
             <p class="max-w-2xl text-base leading-8 text-slate-600">
-              Built for presentations to show routing, reusable components, and server communication
-              in a practical, friendly flow.
+              Votrex helps your team research faster, write clearer outputs, and turn decisions into
+              actionable next steps without switching tools.
             </p>
           </div>
 
           <div class="flex flex-wrap gap-2.5 text-[13px] text-slate-600">
-            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">Components</span>
-            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">Composables</span>
-            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">API Routes</span>
+            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">Knowledge Search</span>
+            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">Team Context</span>
+            <span class="rounded-full border border-slate-200 bg-[#fbfbfa] px-4 py-2">Secure API Layer</span>
           </div>
 
           <div class="flex flex-wrap items-center gap-3">
@@ -59,10 +59,10 @@ const highlights = [
               to="/chat"
               class="inline-flex items-center justify-center rounded-xl bg-[#171919] px-5 py-3 font-medium text-white transition hover:bg-slate-800"
             >
-              Open Chat
+              Launch Workspace
             </NuxtLink>
             <span class="rounded-xl border border-slate-200 bg-white/10 px-3 py-2 text-xs font-medium text-slate-700">
-              Live demo ready
+              Ready for daily use
             </span>
           </div>
         </div>
@@ -71,12 +71,12 @@ const highlights = [
           <div class="rounded-[24px] border border-slate-800/40 bg-gradient-to-b from-[#1b2023] to-[#131719] p-5 text-white shadow-[0_22px_55px_rgba(15,23,42,0.28)] md:p-6">
             <div class="mb-4 flex items-center justify-end">
               <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] text-slate-200">
-                Presentation Mode
+                Product Preview
               </span>
             </div>
 
             <h2 class="text-2xl font-semibold leading-8">
-              Small enough to explain live
+              Built for real work, not just chat
             </h2>
 
             <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-200">
@@ -92,16 +92,16 @@ const highlights = [
 
           <div class="rounded-[20px] border border-slate-200 bg-white p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-              Quick Start
+              Get Started
             </p>
             <p class="mt-1 text-sm leading-6 text-slate-600">
-              Open chat, send your first prompt, and show how the UI updates in real time.
+              Open your workspace, ask your first task, and turn the response into clear output in minutes.
             </p>
             <NuxtLink
               to="/chat"
               class="mt-3 inline-flex items-center rounded-lg border border-slate-200 bg-[#fbfbfa] px-3.5 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-300"
             >
-              Go to chat
+              Start with a prompt
             </NuxtLink>
           </div>
         </div>
