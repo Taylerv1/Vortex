@@ -77,7 +77,7 @@ function handleKeydown(event: KeyboardEvent) {
 
       <button
         type="submit"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-sm transition hover:bg-emerald-600 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
+        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#caa93f] text-[#171919] shadow-sm transition hover:bg-[#b8952e] disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
         :disabled="!canSend"
         aria-label="Send message"
       >

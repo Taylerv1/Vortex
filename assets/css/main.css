@@ -12,7 +12,8 @@
   }
 
   ::selection {
-    @apply bg-emerald-200 text-slate-900;
+    background-color: rgba(202, 169, 63, 0.35);
+    color: #0f172a;
   }
 }
 

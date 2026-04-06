@@ -54,7 +54,7 @@ const emit = defineEmits<{
           </p>
           <button
             type="button"
-            class="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-2 py-1 text-[10px] font-medium text-emerald-300 transition hover:bg-emerald-500/20"
+            class="rounded-lg border border-[#caa93f]/40 bg-[#caa93f]/15 px-2 py-1 text-[10px] font-medium text-[#caa93f] transition hover:bg-[#caa93f]/25"
             @click="emit('newChat')"
           >
             New Chat

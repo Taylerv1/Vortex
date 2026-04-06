@@ -26,11 +26,11 @@ const accentToggle = ref(false)
       <div class="flex flex-wrap items-center gap-2.5">
         <button
           type="button"
-          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-emerald-300 hover:text-emerald-600"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-[#caa93f]/45 hover:text-[#caa93f]"
           @click="emit('newChat')"
         >
           <svg
-            class="h-4 w-4 text-emerald-500"
+            class="h-4 w-4 text-[#caa93f]"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ const accentToggle = ref(false)
         <button
           type="button"
           class="relative inline-flex h-8 w-12 items-center rounded-full p-1 transition"
-          :class="accentToggle ? 'bg-emerald-400/70' : 'bg-slate-200'"
+          :class="accentToggle ? 'bg-[#caa93f]/70' : 'bg-slate-200'"
           @click="accentToggle = !accentToggle"
           aria-label="Theme accent toggle"
         >

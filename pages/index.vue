@@ -36,7 +36,7 @@ const highlights = [
           </div>
 
           <div class="space-y-4">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.32em] text-emerald-600">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.32em] text-[#caa93f]">
               AI Workspace for Product Teams
             </p>
             <h1 class="max-w-3xl text-3xl font-semibold tracking-tight text-slate-900 md:text-[2.4rem]">
