@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 
-const props = defineProps<{
+const { messageCount } = defineProps<{
   messageCount: number
 }>()
 
@@ -10,8 +10,7 @@ const emit = defineEmits<{
   newChat: []
 }>()
 
-const canClear = computed(() => props.messageCount > 0)
-const accentToggle = ref(false)
+const isAccentEnabled = ref(false)
 </script>
 
 <template>
@@ -64,13 +63,13 @@ const accentToggle = ref(false)
         <button
           type="button"
           class="relative inline-flex h-8 w-12 items-center rounded-full p-1 transition"
-          :class="accentToggle ? 'bg-[#caa93f]/70' : 'bg-slate-200'"
-          @click="accentToggle = !accentToggle"
+          :class="isAccentEnabled ? 'bg-[#caa93f]/70' : 'bg-slate-200'"
+          @click="isAccentEnabled = !isAccentEnabled"
           aria-label="Theme accent toggle"
         >
           <span
             class="h-6 w-6 rounded-full bg-white shadow-sm transition"
-            :class="accentToggle ? 'translate-x-4' : 'translate-x-0'"
+            :class="isAccentEnabled ? 'translate-x-4' : 'translate-x-0'"
           />
         </button>
 
@@ -150,7 +149,7 @@ const accentToggle = ref(false)
         <button
           type="button"
           class="flex h-10 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 shadow-sm transition hover:text-rose-500 disabled:cursor-not-allowed disabled:opacity-50"
-          :disabled="!canClear"
+          :disabled="messageCount === 0"
           @click="emit('clear')"
         >
           <svg

@@ -6,6 +6,14 @@ export type ChatMessage = {
   text: string
 }
 
+const DEFAULT_ERROR_MESSAGE = 'Something went wrong while contacting the server. Please try again.'
+
+type FetchErrorShape = {
+  data?: {
+    statusMessage?: string
+  }
+}
+
 function createMessage(role: ChatMessage['role'], text: string): ChatMessage {
   return {
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -14,10 +22,28 @@ function createMessage(role: ChatMessage['role'], text: string): ChatMessage {
   }
 }
 
+function getServerStatusMessage(error: unknown): string | null {
+  if (typeof error !== 'object' || error === null || !('data' in error)) {
+    return null
+  }
+
+  const statusMessage = (error as FetchErrorShape).data?.statusMessage
+
+  if (typeof statusMessage !== 'string' || statusMessage.trim().length === 0) {
+    return null
+  }
+
+  return statusMessage
+}
+
 export function useChat() {
   const messages = ref<ChatMessage[]>([])
   const loading = ref(false)
   const error = ref('')
+
+  function pushMessage(role: ChatMessage['role'], text: string) {
+    messages.value.push(createMessage(role, text))
+  }
 
   async function sendMessage(text: string) {
     const prompt = text.trim()
@@ -27,7 +53,7 @@ export function useChat() {
     }
 
     error.value = ''
-    messages.value.push(createMessage('user', prompt))
+    pushMessage('user', prompt)
     loading.value = true
 
     try {
@@ -37,21 +63,11 @@ export function useChat() {
         body: { prompt },
       })
 
-      messages.value.push(createMessage('assistant', response.reply))
+      pushMessage('assistant', response.reply)
     } catch (caughtError) {
       console.error('Chat request failed:', caughtError)
 
-      if (typeof caughtError === 'object' && caughtError && 'data' in caughtError) {
-        const serverMessage = (caughtError as { data?: { statusMessage?: string } }).data?.statusMessage
-
-        if (serverMessage) {
-          error.value = serverMessage
-        } else {
-          error.value = 'Something went wrong while contacting the server. Please try again.'
-        }
-      } else {
-        error.value = 'Something went wrong while contacting the server. Please try again.'
-      }
+      error.value = getServerStatusMessage(caughtError) ?? DEFAULT_ERROR_MESSAGE
     } finally {
       loading.value = false
     }

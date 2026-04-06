@@ -20,14 +20,14 @@ const {
   clearError,
 } = useChat()
 
-const demoConversations = ['Introduction', 'Vue Basics', 'Nuxt Demo']
+const recentConversations = ['Introduction', 'Vue Basics', 'Nuxt Demo']
 </script>
 
 <template>
   <main class="h-[100dvh] overflow-hidden bg-[#efe8cf] p-0 text-slate-900">
     <div class="grid h-full min-h-0 gap-0 lg:grid-cols-[250px,1fr]">
       <Sidebar
-        :conversations="demoConversations"
+        :conversations="recentConversations"
         @new-chat="clearChat"
       />
 

@@ -13,7 +13,6 @@ const emit = defineEmits<{
     <div class="space-y-3">
       <div class="flex items-center justify-between gap-1.5 px-1 py-2">
         <div class="flex items-center gap-2.5 px-1">
-
           <div class="min-w-0">
             <p class="text-[15px] font-semibold tracking-tight text-white">
               Votrex 4o mini

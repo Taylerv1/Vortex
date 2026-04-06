@@ -5,36 +5,53 @@ type ChatBody = {
 }
 
 const MODEL_ID = 'openai/gpt-4o-mini'
+const DEFAULT_REPLY = 'I could not generate a reply this time.'
+const MISSING_PROMPT_MESSAGE = 'A prompt is required.'
+const MISSING_KEY_MESSAGE = 'OPENROUTER_API_KEY is missing on the server.'
+const LOW_CREDITS_MESSAGE = 'OpenRouter credits are too low for this request. Add credits or use a cheaper model.'
+const GENERIC_FAILURE_MESSAGE = 'Failed to generate a reply.'
+const SYSTEM_PROMPT =
+  'You are Votrex, a helpful assistant inside a simple university demo. Keep answers short, clear, and easy to understand.'
 
-export default defineEventHandler(async (event) => {
-  const body = await readBody<ChatBody>(event)
+function getPromptOrThrow(body: ChatBody): string {
   const prompt = body.prompt?.trim()
 
   if (!prompt) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'A prompt is required.',
+      statusMessage: MISSING_PROMPT_MESSAGE,
     })
   }
 
-  const config = useRuntimeConfig(event)
+  return prompt
+}
 
-  if (!config.openrouterApiKey) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: 'OPENROUTER_API_KEY is missing on the server.',
-    })
-  }
-
+function createOpenRouterClient(apiKey: string) {
   // OpenRouter is OpenAI-compatible, so we can reuse the official SDK.
-  const client = new OpenAI({
-    apiKey: config.openrouterApiKey,
+  return new OpenAI({
+    apiKey,
     baseURL: 'https://openrouter.ai/api/v1',
     defaultHeaders: {
       'HTTP-Referer': 'http://localhost:3000',
       'X-Title': 'Votrex',
     },
   })
+}
+
+export default defineEventHandler(async (event) => {
+  const body = await readBody<ChatBody>(event)
+  const prompt = getPromptOrThrow(body)
+
+  const config = useRuntimeConfig(event)
+
+  if (!config.openrouterApiKey) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: MISSING_KEY_MESSAGE,
+    })
+  }
+
+  const client = createOpenRouterClient(config.openrouterApiKey)
 
   try {
     const response = await client.chat.completions.create({
@@ -43,8 +60,7 @@ export default defineEventHandler(async (event) => {
       messages: [
         {
           role: 'system',
-          content:
-            'You are Votrex, a helpful assistant inside a simple university demo. Keep answers short, clear, and easy to understand.',
+          content: SYSTEM_PROMPT,
         },
         {
           role: 'user',
@@ -56,7 +72,7 @@ export default defineEventHandler(async (event) => {
     const reply = response.choices[0]?.message?.content?.trim()
 
     return {
-      reply: reply || 'I could not generate a reply this time.',
+      reply: reply || DEFAULT_REPLY,
     }
   } catch (error) {
     console.error('OpenRouter request failed:', error)
@@ -64,13 +80,13 @@ export default defineEventHandler(async (event) => {
     if (error instanceof OpenAI.APIError && error.status === 402) {
       throw createError({
         statusCode: 402,
-        statusMessage: 'OpenRouter credits are too low for this request. Add credits or use a cheaper model.',
+        statusMessage: LOW_CREDITS_MESSAGE,
       })
     }
 
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to generate a reply.',
+      statusMessage: GENERIC_FAILURE_MESSAGE,
     })
   }
 })
