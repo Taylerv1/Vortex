@@ -7,7 +7,7 @@ const examplePrompts = [
 </script>
 
 <template>
-  <div class="w-full space-y-2 py-0 px-3 md:px-6">
+  <div class="w-full space-y-2 py-0 px-10 md:px-40">
     <div class="text-center">
       <div class="mx-auto flex items-center justify-center">
         <img
