@@ -74,9 +74,9 @@ const emit = defineEmits<{
     </div>
 
     <div class="mt-auto space-y-2">
-      <div class="rounded-[18px] bg-[#caa93f] p-2.5 text-[#171919]">
+      <div class="rounded-[18px] border border-[#caa93f]/35 bg-gradient-to-br from-[#242321] via-[#1d1d1b] to-[#151513] p-2.5 text-white shadow-[0_18px_38px_rgba(0,0,0,0.35)]">
         <div class="text-center">
-          <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+          <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full border border-[#caa93f]/45 bg-[#caa93f]/18 text-[#e6cd77]">
             <svg
               class="h-5 w-5"
               viewBox="0 0 24 24"
@@ -97,25 +97,25 @@ const emit = defineEmits<{
               />
             </svg>
           </div>
-          <p class="text-[15px] font-semibold">
+          <p class="text-[15px] font-semibold text-white">
             Upgrade your
-            <span class="rounded-md bg-yellow-300 px-2 py-0.5 text-slate-900">Plan</span>
+            <span class="rounded-md bg-[#caa93f] px-2 py-0.5 text-[#171919]">Plan</span>
           </p>
-          <p class="mt-1.5 text-[10px] leading-4 text-[#171919]">
+          <p class="mt-1.5 text-[10px] leading-4 text-slate-300">
             Faster responses and a cleaner layout.
           </p>
         </div>
 
         <button
           type="button"
-          class="mt-2.5 w-full rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-[#171919] transition hover:bg-white/20"
+          class="mt-2.5 w-full rounded-xl border border-[#caa93f]/45 bg-[#caa93f]/20 px-4 py-2 text-sm font-medium text-[#edd58a] transition hover:bg-[#caa93f]/30"
         >
           View All Plans
         </button>
       </div>
 
       <div class="flex items-center gap-2.5 rounded-[18px] bg-white/5 px-3 py-2">
-        <div class="flex h-9 w-9 items-center justify-center rounded-full border border-[#caa93f]/45 bg-[#caa93f]/35 text-sm font-bold text-white">
+        <div class="flex h-9 w-9 items-center justify-center rounded-full border border-[#caa93f]/55 bg-[#171919] text-sm font-bold text-[#d8bc63] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
           M
         </div>
 
