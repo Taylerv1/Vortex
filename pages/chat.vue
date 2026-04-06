@@ -27,15 +27,12 @@ const demoConversations = ['Introduction', 'Vue Basics', 'Nuxt Demo']
   <main class="h-[100dvh] overflow-hidden bg-[#efe8cf] p-0 text-slate-900">
     <div class="grid h-full min-h-0 gap-0 lg:grid-cols-[250px,1fr]">
       <Sidebar
-        active-page="chat"
         :conversations="demoConversations"
         @new-chat="clearChat"
       />
 
       <section class="relative flex h-full min-h-0 flex-col overflow-hidden border-l border-slate-200 bg-[#fbfbfa] shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
         <ChatHeader
-          title="Votrex Assistant"
-          subtitle="Minimal Nuxt + Vue demo"
           :message-count="messages.length"
           @clear="clearChat"
           @new-chat="clearChat"

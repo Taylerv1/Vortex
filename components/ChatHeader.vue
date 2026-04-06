@@ -2,8 +2,6 @@
 import { computed, ref } from 'vue'
 
 const props = defineProps<{
-  title: string
-  subtitle: string
   messageCount: number
 }>()
 
@@ -11,10 +9,6 @@ const emit = defineEmits<{
   clear: []
   newChat: []
 }>()
-
-const messageLabel = computed(() => {
-  return props.messageCount === 1 ? '1 message' : `${props.messageCount} messages`
-})
 
 const canClear = computed(() => props.messageCount > 0)
 const accentToggle = ref(false)

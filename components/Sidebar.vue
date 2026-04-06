@@ -1,6 +1,5 @@
 <script setup lang="ts">
 defineProps<{
-  activePage: 'home' | 'chat'
   conversations: string[]
 }>()
 
