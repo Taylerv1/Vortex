@@ -38,7 +38,7 @@ const examplePrompts = [
           </div>
         </div>
 
-        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-pink-200 via-orange-200 to-fuchsia-200 text-sm font-semibold text-slate-900">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full border border-[#caa93f]/45 bg-[#caa93f]/35 text-sm font-semibold text-[#171919]">
           M
         </div>
       </div>

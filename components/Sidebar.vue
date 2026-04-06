@@ -115,7 +115,7 @@ const emit = defineEmits<{
       </div>
 
       <div class="flex items-center gap-2.5 rounded-[18px] bg-white/5 px-3 py-2">
-        <div class="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-rose-300 via-orange-300 to-indigo-400 text-sm font-bold text-slate-900">
+        <div class="flex h-9 w-9 items-center justify-center rounded-full border border-[#caa93f]/45 bg-[#caa93f]/35 text-sm font-bold text-white">
           M
         </div>
 

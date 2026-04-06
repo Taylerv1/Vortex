@@ -20,7 +20,7 @@ const avatarLabel = computed(() => (isUser.value ? 'Y' : 'V'))
       <div
         class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-semibold shadow-sm"
         :class="isUser
-          ? 'bg-gradient-to-br from-pink-200 via-orange-200 to-fuchsia-200 text-slate-900'
+          ? 'border border-[#caa93f]/45 bg-[#caa93f]/35 text-[#171919]'
           : 'border border-black/20 bg-slate-400/25 text-slate-900'"
       >
         <span v-if="isUser">{{ avatarLabel }}</span>
