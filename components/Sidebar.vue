@@ -74,7 +74,7 @@ const emit = defineEmits<{
     </div>
 
     <div class="mt-auto space-y-2">
-      <div class="rounded-[18px] bg-gradient-to-br from-[#2d42ea] via-[#3340d6] to-[#1b2ab5] p-2.5 text-white shadow-[0_20px_45px_rgba(25,39,155,0.35)]">
+      <div class="rounded-[18px] bg-[#caa93f] p-2.5 text-[#171919]">
         <div class="text-center">
           <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
             <svg
@@ -101,14 +101,14 @@ const emit = defineEmits<{
             Upgrade your
             <span class="rounded-md bg-yellow-300 px-2 py-0.5 text-slate-900">Plan</span>
           </p>
-          <p class="mt-1.5 text-[10px] leading-4 text-blue-100/80">
+          <p class="mt-1.5 text-[10px] leading-4 text-[#171919]">
             Faster responses and a cleaner layout.
           </p>
         </div>
 
         <button
           type="button"
-          class="mt-2.5 w-full rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+          class="mt-2.5 w-full rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-[#171919] transition hover:bg-white/20"
         >
           View All Plans
         </button>
