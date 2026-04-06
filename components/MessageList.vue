@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { ChatMessage } from '~/composables/useChat'
+import type { ChatMessage } from '../composables/useChat'
 
 defineOptions({
   name: 'MessageList',
