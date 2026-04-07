@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const examplePrompts = [
-  'Build a small Vue page. Keep it clean and fast.',
-  'Explain Nuxt routing in 3 direct steps.',
-  'Give me a beginner component structure. No fluff.',
+  'Give me Vue setup in plain words. No lecture.',
+  'Explain Nuxt routing like I am in a rush.',
+  'Fix my component structure and roast it gently.',
 ]
 </script>
 
@@ -20,7 +20,7 @@ const examplePrompts = [
         Start a conversation with Votrex
       </h3>
       <p class="mt-0.5 text-[12px] leading-4 text-slate-500 md:text-[12px]">
-        Ask direct. Get direct. Fast answers, minimal fluff.
+        Talk like a human. Get fast answers with zero drama.
       </p>
     </div>
 
@@ -29,7 +29,7 @@ const examplePrompts = [
         <div class="w-full max-w-[430px]">
           <div class="rounded-[18px] border border-slate-200 bg-white px-3 py-2 shadow-sm">
             <p class="whitespace-pre-wrap text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Build me a simple Nuxt page with one reusable component, and keep the explanation tight.
+              Yo, build me a tiny Nuxt page with one reusable component. Keep it short, I got no time.
             </p>
           </div>
           <div class="mt-0.5 flex items-center justify-end pr-1 text-[10px] text-slate-400">
@@ -54,7 +54,7 @@ const examplePrompts = [
         <div class="w-full rounded-[22px] bg-[#f3f4f6] p-2 shadow-sm">
           <div class="rounded-[16px] border border-slate-200 bg-white px-3 py-2">
             <p class="text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Done. Here is a reusable starter block you can drop in now.
+              Bet. Here is a starter block you can paste right now and keep moving.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ const message = ref('')
           </div>
 
           <p class="mt-1 text-[12px] leading-5 text-slate-600 md:text-[12px] md:leading-5">
-            Use this snippet to present reusable components, ref, and emits fast.
+            Quick path: present reusable components, ref, and emits without over-talking.
           </p>
 
           <div class="mt-1 flex flex-wrap items-center text-[9px] text-slate-400">
