@@ -5,6 +5,6 @@
       <span class="h-2.5 w-2.5 rounded-full bg-[#caa93f]/75" />
       <span class="h-2.5 w-2.5 rounded-full bg-[#caa93f]/45" />
     </span>
-    <span>Votrex is thinking...</span>
+    <span>Vortex is thinking...</span>
   </div>
 </template>

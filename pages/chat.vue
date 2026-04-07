@@ -9,7 +9,7 @@ import Sidebar from '~/components/Sidebar.vue'
 import { useChat } from '~/composables/useChat'
 
 useHead({
-  title: 'Votrex Chat',
+  title: 'Vortex Chat',
 })
 
 const {

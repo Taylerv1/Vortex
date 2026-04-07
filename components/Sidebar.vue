@@ -15,7 +15,7 @@ const emit = defineEmits<{
         <div class="flex items-center gap-2.5 px-1">
           <div class="min-w-0">
             <p class="text-[15px] font-semibold tracking-tight text-white">
-              Votrex 4o mini
+              Vortex 4o mini
             </p>
             <p class="text-[13px] leading-tight text-slate-400">
               Demo workspace
@@ -119,10 +119,10 @@ const emit = defineEmits<{
 
         <div class="min-w-0 flex-1">
           <p class="truncate text-sm font-semibold text-white">
-            Votrex Presenter
+            Vortex Presenter
           </p>
           <p class="truncate text-[10px] text-slate-400">
-            demo@votrex.local
+            demo@vortex.local
           </p>
         </div>
 

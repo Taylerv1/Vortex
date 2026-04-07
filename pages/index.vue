@@ -2,7 +2,7 @@
 import { useHead } from '#imports'
 
 useHead({
-  title: 'Votrex | AI Workspace',
+  title: 'Vortex | AI Workspace',
 })
 
 const highlights = [
@@ -43,7 +43,7 @@ const highlights = [
               Move from idea to shipped work with one focused AI workspace.
             </h1>
             <p class="max-w-2xl text-base leading-8 text-slate-600">
-              Votrex helps your team research faster, write clearer outputs, and turn decisions into
+              Vortex helps your team research faster, write clearer outputs, and turn decisions into
               actionable next steps without switching tools.
             </p>
           </div>

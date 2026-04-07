@@ -7,7 +7,7 @@ const props = defineProps<{
 }>()
 
 const isUser = computed(() => props.message.role === 'user')
-const authorLabel = computed(() => (isUser.value ? 'You' : 'Votrex'))
+const authorLabel = computed(() => (isUser.value ? 'You' : 'Vortex'))
 const avatarLabel = computed(() => (isUser.value ? 'M' : 'V'))
 </script>
 

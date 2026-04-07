@@ -17,7 +17,7 @@ const examplePrompts = [
         >
       </div>
       <h3 class="mt-1.5 text-lg font-semibold tracking-tight text-slate-900 md:text-[1.25rem]">
-        Start a conversation with Votrex
+        Start a conversation with Vortex
       </h3>
       <p class="mt-0.5 text-[12px] leading-4 text-slate-500 md:text-[12px]">
         Talk like a human. Get fast answers with zero drama.

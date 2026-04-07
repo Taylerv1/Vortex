@@ -10,11 +10,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Votrex',
+      title: 'Vortex',
       meta: [
         {
           name: 'description',
-          content: 'Votrex is a minimal AI chat demo built with Nuxt 3, Vue 3, and Tailwind CSS.',
+          content: 'Vortex is a minimal AI chat demo built with Nuxt 3, Vue 3, and Tailwind CSS.',
         },
       ],
     },

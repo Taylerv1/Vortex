@@ -41,7 +41,7 @@ function handleKeydown(event: KeyboardEvent) {
       for="chat-input"
       class="sr-only"
     >
-      Ask Votrex something
+      Ask Vortex something
     </label>
 
     <div class="chat-input-row flex items-end gap-3">

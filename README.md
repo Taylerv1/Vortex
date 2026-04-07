@@ -1,6 +1,6 @@
-# Votrex
+# Vortex
 
-Votrex is a modern AI chat web app built with Nuxt 3, Vue 3, and Tailwind CSS.
+Vortex is a modern AI chat web app built with Nuxt 3, Vue 3, and Tailwind CSS.
 
 It includes:
 - a landing page
