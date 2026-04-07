@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const examplePrompts = [
-  'Give me Vue setup in plain words. No lecture.',
-  'Explain Nuxt routing like I am in a rush.',
-  'Fix my component structure and roast it gently.',
+  'Plan me a fun weekend on a low budget.',
+  'Give me 3 quick ideas to reset my mood today.',
+  'Help me write a polite message to postpone a meeting.',
 ]
 </script>
 
@@ -29,7 +29,7 @@ const examplePrompts = [
         <div class="w-full max-w-[430px]">
           <div class="rounded-[18px] border border-slate-200 bg-white px-3 py-2 shadow-sm">
             <p class="whitespace-pre-wrap text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Yo, build me a tiny Nuxt page with one reusable component. Keep it short, I got no time.
+              Yo, suggest a simple weekend plan that feels fun but cheap. Keep it short, I got no time.
             </p>
           </div>
           <div class="mt-0.5 flex items-center justify-end pr-1 text-[10px] text-slate-400">
@@ -54,31 +54,34 @@ const examplePrompts = [
         <div class="w-full rounded-[22px] bg-[#f3f4f6] p-2 shadow-sm">
           <div class="rounded-[16px] border border-slate-200 bg-white px-3 py-2">
             <p class="text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Bet. Here is a starter block you can paste right now and keep moving.
+              Bet. Here is a quick plan you can actually do this weekend.
             </p>
           </div>
 
           <div class="mt-1.5 overflow-hidden rounded-[16px] border border-slate-900/90 bg-[#1d1f22] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
             <div class="flex items-center justify-between border-b border-white/5 bg-[#2b2d31] px-2.5 py-1.5 text-[10px] font-medium text-slate-300">
               <div class="flex items-center gap-2">
-                <span class="rounded-md bg-white/5 px-3 py-1">HTML</span>
-                <span class="rounded-md px-2 py-1 text-slate-500">CSS</span>
-                <span class="rounded-md px-2 py-1 text-slate-500">JS</span>
+                <span class="rounded-md bg-white/5 px-3 py-1">Plan</span>
+                <span class="rounded-md px-2 py-1 text-slate-500">Budget</span>
+                <span class="rounded-md px-2 py-1 text-slate-500">Bonus</span>
               </div>
-              <span>Copy code</span>
+              <span>Copy list</span>
             </div>
 
-            <pre class="overflow-x-auto max-h-[120px] px-2.5 py-1.5 text-[10px] leading-4 text-slate-200 md:text-[10px] md:leading-4"><code>&lt;template&gt;
-  &lt;ChatInput @submit="sendMessage" /&gt;
-&lt;/template&gt;
+            <pre class="overflow-x-auto max-h-[120px] px-2.5 py-1.5 text-[10px] leading-4 text-slate-200 md:text-[10px] md:leading-4"><code>Friday:
+- 45 min walk + cheap coffee
 
-&lt;script setup lang="ts"&gt;
-const message = ref('')
-&lt;/script&gt;</code></pre>
+Saturday:
+- Local market + cook at home
+- Movie night instead of going out
+
+Sunday:
+- One calm hour to plan the week
+- Prep meals to save money</code></pre>
           </div>
 
           <p class="mt-1 text-[12px] leading-5 text-slate-600 md:text-[12px] md:leading-5">
-            Quick path: present reusable components, ref, and emits without over-talking.
+            Quick path: keep it simple, low-cost, and zero overthinking.
           </p>
 
           <div class="mt-1 flex flex-wrap items-center text-[9px] text-slate-400">
