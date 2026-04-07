@@ -14,11 +14,11 @@ const avatarLabel = computed(() => (isUser.value ? 'M' : 'V'))
 <template>
   <article class="flex" :class="isUser ? 'justify-end' : 'justify-start'">
     <div
-      class="flex max-w-[820px] gap-4"
+      class="message-item-row flex max-w-[820px] gap-4"
       :class="isUser ? 'flex-row-reverse items-end' : 'items-end'"
     >
       <div
-        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-semibold shadow-sm"
+        class="message-avatar flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-semibold shadow-sm"
         :class="isUser
           ? 'border border-[#caa93f]/45 bg-[#caa93f]/35 text-[#171919]'
           : 'border border-black/20 bg-slate-400/25 text-slate-900'"
@@ -34,7 +34,7 @@ const avatarLabel = computed(() => (isUser.value ? 'M' : 'V'))
 
       <div class="space-y-2">
         <div
-          class="rounded-[24px] border px-5 py-4 shadow-sm"
+          class="message-bubble rounded-[24px] border px-5 py-4 shadow-sm"
           :class="isUser
             ? 'border-slate-200 bg-white text-slate-800'
             : 'border-slate-200 bg-[#f3f4f6] text-slate-800'"

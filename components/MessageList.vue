@@ -17,7 +17,7 @@ const hasMessages = computed(() => props.messages.length > 0)
   <div class="soft-scrollbar flex min-h-0 flex-1 overflow-y-auto bg-[#fbfbfa]">
     <div
       v-if="hasMessages"
-      class="mx-auto flex w-full max-w-[980px] flex-col gap-8 px-4 py-8 md:px-8"
+      class="message-list-inner mx-auto flex w-full max-w-[980px] flex-col gap-8 px-4 py-8 md:px-8"
     >
       <MessageItem
         v-for="message in messages"
@@ -28,7 +28,7 @@ const hasMessages = computed(() => props.messages.length > 0)
 
     <div
       v-else
-      class="flex w-full items-center justify-center px-4 py-5 md:px-6 md:py-6"
+      class="empty-state-wrap flex w-full items-center justify-center px-4 py-5 md:px-6 md:py-6"
     >
       <EmptyState />
     </div>

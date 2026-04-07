@@ -7,7 +7,7 @@ const examplePrompts = [
 </script>
 
 <template>
-  <div class="w-full space-y-2 py-0 px-10 md:px-40">
+  <div class="empty-state-wrap w-full space-y-2 px-4 py-0 sm:px-8 md:px-40">
     <div class="text-center">
       <div class="mx-auto flex items-center justify-center">
         <img
@@ -25,9 +25,9 @@ const examplePrompts = [
       </p>
     </div>
 
-    <div class="space-y-2.5">
-      <div class="flex justify-end gap-3">
-        <div class="max-w-[430px]">
+    <div class="empty-state-grid space-y-2.5">
+      <div class="flex flex-col-reverse items-end gap-2.5 sm:flex-row sm:justify-end sm:gap-3">
+        <div class="w-full max-w-[430px]">
           <div class="rounded-[18px] border border-slate-200 bg-white px-3 py-2 shadow-sm">
             <p class="whitespace-pre-wrap text-[12px] leading-5 text-slate-700 md:text-[12px]">
               Write a simple Nuxt page with a reusable component and show how v-model works in the chat input.
@@ -43,7 +43,7 @@ const examplePrompts = [
         </div>
       </div>
 
-      <div class="flex items-end gap-3">
+      <div class="flex items-start gap-2.5 sm:items-end sm:gap-3">
         <div class="flex h-11 w-11 shrink-0 items-center justify-center">
           <img
             src="/VortexLogo.png"
@@ -89,7 +89,7 @@ const message = ref('')
       </div>
     </div>
 
-    <ul class="grid gap-1.5 md:grid-cols-3">
+    <ul class="empty-state-quick grid gap-1.5 md:grid-cols-3">
       <li
         v-for="prompt in examplePrompts"
         :key="prompt"

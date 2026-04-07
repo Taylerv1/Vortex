@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/chat-mobile.css'],
   runtimeConfig: {
     // We use an OpenRouter key because the demo now targets Claude through OpenRouter.
     openrouterApiKey: process.env.OPENROUTER_API_KEY || process.env.OPENAI_API_KEY,

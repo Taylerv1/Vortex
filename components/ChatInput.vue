@@ -34,7 +34,7 @@ function handleKeydown(event: KeyboardEvent) {
 
 <template>
   <form
-    class="rounded-[18px] border border-slate-200 bg-white p-2.5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
+    class="chat-input-card rounded-[18px] border border-slate-200 bg-white p-2.5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
     @submit.prevent="handleSubmit"
   >
     <label
@@ -44,10 +44,10 @@ function handleKeydown(event: KeyboardEvent) {
       Ask Votrex something
     </label>
 
-    <div class="flex items-end gap-3">
+    <div class="chat-input-row flex items-end gap-3">
       <button
         type="button"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:bg-slate-50 hover:text-slate-800"
+        class="chat-input-action flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:bg-slate-50 hover:text-slate-800"
         aria-label="Add command"
       >
         <svg
@@ -77,7 +77,7 @@ function handleKeydown(event: KeyboardEvent) {
 
       <button
         type="submit"
-        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#caa93f] text-[#171919] shadow-sm transition hover:bg-[#b8952e] disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
+        class="chat-send-action flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#caa93f] text-[#171919] shadow-sm transition hover:bg-[#b8952e] disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
         :disabled="!canSend"
         aria-label="Send message"
       >
@@ -98,7 +98,7 @@ function handleKeydown(event: KeyboardEvent) {
       </button>
     </div>
 
-    <div class="mt-2 flex items-center justify-between px-1 text-[11px] text-slate-400">
+    <div class="chat-input-meta mt-2 flex items-center justify-between px-1 text-[11px] text-slate-400">
       <span>Shift + Enter adds a new line</span>
       <span>{{ loading ? 'Generating response...' : 'OpenRouter - gpt-4o-mini' }}</span>
     </div>

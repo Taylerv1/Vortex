@@ -8,6 +8,7 @@ const { messageCount } = defineProps<{
 const emit = defineEmits<{
   clear: []
   newChat: []
+  menu: []
 }>()
 
 const isAccentEnabled = ref(false)
@@ -15,8 +16,29 @@ const isAccentEnabled = ref(false)
 
 <template>
   <header class="border-b border-slate-200 bg-gradient-to-b from-white to-[#fbfbfa] px-4 py-4 md:px-6">
-    <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+    <div class="flex flex-wrap items-center justify-between gap-3 xl:gap-4">
       <div class="flex flex-wrap items-center gap-2.5">
+        <button
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:text-slate-900 lg:hidden"
+          aria-label="Open sidebar"
+          @click="emit('menu')"
+        >
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.33334 5.83325H16.6667M3.33334 9.99992H16.6667M3.33334 14.1666H16.6667"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="1.7"
+            />
+          </svg>
+        </button>
+
         <button
           type="button"
           class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-[#caa93f]/45 hover:text-[#caa93f]"
@@ -42,7 +64,7 @@ const isAccentEnabled = ref(false)
       <div class="flex flex-wrap items-center gap-2">
         <button
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+          class="hidden h-10 w-10 items-center justify-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 sm:flex"
           aria-label="Appearance"
         >
           <svg
@@ -75,7 +97,7 @@ const isAccentEnabled = ref(false)
 
         <button
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900"
+          class="hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900 md:flex"
           aria-label="Bookmark"
         >
           <svg
@@ -95,7 +117,7 @@ const isAccentEnabled = ref(false)
 
         <button
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900"
+          class="hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900 md:flex"
           aria-label="Archive"
         >
           <svg
@@ -116,7 +138,7 @@ const isAccentEnabled = ref(false)
 
         <button
           type="button"
-          class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900"
+          class="hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-900 md:flex"
           aria-label="Gallery"
         >
           <svg
@@ -148,7 +170,7 @@ const isAccentEnabled = ref(false)
 
         <button
           type="button"
-          class="flex h-10 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 shadow-sm transition hover:text-rose-500 disabled:cursor-not-allowed disabled:opacity-50"
+          class="flex h-10 items-center gap-2 rounded-xl border border-slate-200 bg-white px-2.5 text-sm font-medium text-slate-600 shadow-sm transition hover:text-rose-500 disabled:cursor-not-allowed disabled:opacity-50 sm:px-3"
           :disabled="messageCount === 0"
           @click="emit('clear')"
         >
@@ -166,7 +188,7 @@ const isAccentEnabled = ref(false)
               stroke-width="1.5"
             />
           </svg>
-          Clear
+          <span class="hidden sm:inline">Clear</span>
         </button>
       </div>
     </div>
