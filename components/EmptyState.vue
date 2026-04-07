@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const examplePrompts = [
-  'Build a small welcome page in Vue.',
-  'Explain routing in Nuxt with one example.',
-  'Show me a beginner-friendly component structure.',
+  'Build a small Vue page. Keep it clean and fast.',
+  'Explain Nuxt routing in 3 direct steps.',
+  'Give me a beginner component structure. No fluff.',
 ]
 </script>
 
@@ -20,8 +20,7 @@ const examplePrompts = [
         Start a conversation with Votrex
       </h3>
       <p class="mt-0.5 text-[12px] leading-4 text-slate-500 md:text-[12px]">
-        This preview is styled to match the reference layout while keeping the existing demo logic
-        simple and presentation-friendly.
+        Ask direct. Get direct. Fast answers, minimal fluff.
       </p>
     </div>
 
@@ -30,7 +29,7 @@ const examplePrompts = [
         <div class="w-full max-w-[430px]">
           <div class="rounded-[18px] border border-slate-200 bg-white px-3 py-2 shadow-sm">
             <p class="whitespace-pre-wrap text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Write a simple Nuxt page with a reusable component and show how v-model works in the chat input.
+              Build me a simple Nuxt page with one reusable component, and keep the explanation tight.
             </p>
           </div>
           <div class="mt-0.5 flex items-center justify-end pr-1 text-[10px] text-slate-400">
@@ -55,7 +54,7 @@ const examplePrompts = [
         <div class="w-full rounded-[22px] bg-[#f3f4f6] p-2 shadow-sm">
           <div class="rounded-[16px] border border-slate-200 bg-white px-3 py-2">
             <p class="text-[12px] leading-5 text-slate-700 md:text-[12px]">
-              Here is a clean response panel with a sample code-style block to match the requested UI direction.
+              Done. Here is a reusable starter block you can drop in now.
             </p>
           </div>
 
@@ -79,7 +78,7 @@ const message = ref('')
           </div>
 
           <p class="mt-1 text-[12px] leading-5 text-slate-600 md:text-[12px] md:leading-5">
-            Use this area to explain reusable components, ref, and emits during the presentation.
+            Use this snippet to present reusable components, ref, and emits fast.
           </p>
 
           <div class="mt-1 flex flex-wrap items-center text-[9px] text-slate-400">
