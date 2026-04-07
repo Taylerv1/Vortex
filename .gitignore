@@ -4,6 +4,7 @@ node_modules/
 .nuxt/
 .output/
 .nitro/
+.netlify/
 .data/
 .cache/
 dist/
